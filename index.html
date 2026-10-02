@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Employee Payroll Management System — DBMS mini project" />
+  <title>PayPilot · Employee Payroll Management</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <div class="brand">
+        <div class="brand-mark">P</div>
+        <div><strong>PayPilot</strong><span>Payroll workspace</span></div>
+      </div>
+      <div class="workspace-switcher"><span class="workspace-dot"></span><span>Panimalar College</span><span class="chevron">⌄</span></div>
+      <p class="nav-label">Workspace</p>
+      <nav class="nav-list">
+        <button class="nav-item active" data-page="dashboard"><span class="nav-icon">⌂</span>Dashboard</button>
+        <button class="nav-item" data-page="employees"><span class="nav-icon">♙</span>Employees</button>
+        <button class="nav-item" data-page="departments"><span class="nav-icon">▦</span>Departments</button>
+        <button class="nav-item" data-page="attendance"><span class="nav-icon">✓</span>Attendance</button>
+        <button class="nav-item" data-page="payroll"><span class="nav-icon">◈</span>Payroll processing</button>
+        <button class="nav-item" data-page="reports"><span class="nav-icon">▤</span>Reports & search</button>
+      </nav>
+      <p class="nav-label">Developer tools</p>
+      <nav class="nav-list">
+        <button class="nav-item" data-page="sql"><span class="nav-icon">⌘</span>SQL lab</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="support-card"><span class="support-icon">?</span><div><strong>Need a hand?</strong><small>Read the project guide</small></div><span>↗</span></div>
+        <div class="user-card"><div class="avatar">AS</div><div><strong>Admin Student</strong><small>Administrator</small></div><button class="icon-button" aria-label="User menu">•••</button></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>Workspace</span><b>/</b><strong id="breadcrumb-page">Dashboard</strong></div>
+        <div class="topbar-actions">
+          <label class="global-search"><span>⌕</span><input id="global-search" type="search" placeholder="Search anything..." aria-label="Search employees" /><kbd>⌘ K</kbd></label>
+          <button class="icon-button" title="Notifications" aria-label="Notifications">♢<i class="notification-dot"></i></button>
+          <button class="help-button">? <span>Help center</span></button>
+          <button class="primary-button compact" id="quick-add">＋ Add employee</button>
+        </div>
+      </header>
+      <div id="app" class="page-container"></div>
+    </main>
+  </div>
+  <div id="modal-root" aria-live="polite"></div>
+  <div id="toast-root" class="toast-root"></div>
+  <script src="app.js"></script>
+</body>
+</html>
